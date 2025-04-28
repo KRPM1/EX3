@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KHS 위험도 계산기</title>
+    <title>심혈관계 질환 발생 위험도(KRPM)</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -143,7 +143,7 @@ function calculateKHS() {
                 + 0.410 * d;
             SUM = 9.362 * 3.902 + 2.425 * 15.253 + 6.409 * 5.263
                 - 1.430 * 20.538 - 3.843 * 3.847 + 0.810 * 15.014
-                + 18.541 * 0.262 - 4.112 * 1.049
+                + 18.541 * 4.555 - 4.112 * 17.754
                 + 2.464 * 0.496 - 0.503 * 1.923 + 0.410 * 0.101;
             baseline = 0.9647;
         } else {
@@ -172,7 +172,7 @@ function calculateKHS() {
                 - 0.476 * lnHDL + 13.402 * lnSBP - 2.889 * lnA * lnSBP
                 + 0.415 * cs + 0.424 * d;
             SUM = -9.519 * 3.935 + 3.417 * 15.507 + 0.320 * 5.284
-                - 0.476 * 3.965 + 13.402 * 4.483 - 2.889 * 17.616
+                - 0.476 * 3.965 + 13.402 * 0.329 - 2.889 * 1.326
                 + 0.415 * 0.045 + 0.424 * 0.072;
             baseline = 0.96963;
         }
