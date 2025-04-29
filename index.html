@@ -254,6 +254,16 @@ function calculateKHS() {
             }]
         },
         option: {
+            indexAxis: 'x',
+            scales: {
+                x: {
+                    min: 0,
+                    max: 100
+                }
+                y: {
+                beginAtZero: true
+                }
+            }
         }
     });
 }
