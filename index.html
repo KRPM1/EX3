@@ -22,7 +22,7 @@
             background: white;
             padding: 30px 20px;
             border-radius: 10px;
-            margin-bottom: 20px
+            margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             width: 100%;
             max-width: 500px;
@@ -40,7 +40,7 @@
         h2 {
             text-align: left;
             font-weight: bold;
-            color: #000000;
+            color: #FF4B5C;
         }
         d1 {
             text-align: left;            
@@ -50,11 +50,12 @@
         }
         d2 {
             text-align: left;
+            margin-lef: 5px;
             font-weight: normal;
             font-size: 13px;
             color: #4c4c4c;
         }
-        input, select {
+        input {
             margin-top: 7px;
             margin-bottom: 7px;
             padding: 10px;
@@ -63,6 +64,21 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
+        select {
+            margin-top: 7px;
+            margin-bottom: 7px;
+            padding: 10px;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        select:focus {
+        border-color: #FF4B5C;
+        outline: none;
+        }
+        
         button {
             padding: 10px;
             width: 100%;
@@ -104,16 +120,16 @@
         <input type="number" id="age" placeholder="나이 (age)" required>
         <input type="number" id="tc" placeholder="총 콜레스테롤 (Total Cholesterol)" required>
         <input type="number" id="hdl" placeholder="HDL 수치 (HDL-cholesterol)" required>
-        <d2>건강검진 결과 등으로 알 수 있습니다</d2>
-
+        <input type="number" id="sbp" placeholder="수축기 혈압 (systolic BP)" required> 
+        
+        <d2>*건강검진 결과 등으로 알 수 있습니다</d2>
+        
         <select id="tut" required>
             <option value="">혈압약 복용 여부</option>
             <option value="0">아니오</option>
             <option value="1">예</option>
         </select>
-
-        <input type="number" id="sbp" placeholder="수축기 혈압 (systolic BP)" required>
-
+        
         <select id="cs" required>
             <option value="">현재 흡연 여부</option>
             <option value="0">아니오</option>
@@ -244,18 +260,18 @@ function calculateKHS() {
 }
 </script>
 <div class="container">
-    <h1>Q. Why KRPM?</h1>
+    <h2>Q. Why KRPM?</h2>
     <d1>KRPM(Korean Risk Protection Model)은 한국인에게 최적화된 ASCVD
         (죽상경화성 심혈관 질환, Atherosclerotic Cardiovascular Disease) 
         발병 위험도 측정 모델입니다.미국인 환자 데이터를 기반으로 한 ACC/AHA (2013)모델이
         동양인에 대해 위험도를 과하게 측정하는 것을 보완하고자 2015년에 제안된 한국형 모델입니다.</d1>
-    <h1>ASCVD(죽상경화증)이란 무엇인가요?</h1>
-    <h1>수식은 어떻게 계산되나요?</h1>
+    <h2>Q. ASCVD(죽상경화증)이란 무엇인가요?</h2>
+    <h2>Q. 수식은 어떻게 계산되나요?</h2>
     <d1>위험도 측정 수식은 2015년 KRPM 모델을 기반으로 하고 있습니다. (원본 논문 : The ACC/AHA 2013 pooled 
         cohort equations compared to a Korean Risk Prediction Model for atherosclerotic 
         cardiovascular disease Jung, Keum Ji et al. Atherosclerosis, Volume 242, Issue 1, 
         367 - 375) 위험도는 나이, 총 콜레스테롤, HDL 콜레스테롤 등을 토대로 검증된 계산식을 통해 계산됩니다. </d1>
-    <h1>발병 위험을 줄이기 위해서는 어떻게 해야하나요?</h1>
+    <h2>발병 위험을 줄이기 위해서는 어떻게 해야하나요?</h2>
     <d1>발병 위험은 나이에 비례하여 증가하며, 총 콜레스테롤이 너무 높거나 HDL 수치가 너무 낮으면 발병 위험이 
         올라갈 수 있습니다. 또한 일반적으로 흡연자인 경우, 당뇨병 환자인 경우 발병 위험이 일정 수준 올라가며, 
         여성보다 남성의 발병 위험이 상대적으로 높게 나타납니다. </d1>
