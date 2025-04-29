@@ -241,42 +241,27 @@ function calculateKHS() {
 
     // 그래프
     const ctx = document.getElementById('riskChart').getContext('2d');
-    if (chartInstance) {
-        chartInstance.destroy();
-    }
-    chartInstance = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['위험도'],
-            datasets: [{
-                data: [khsRounded],
-                backgroundColor: '#4c4c4c',
-                borderRadius: 8,
-                borderSkipped: false,
-                borderWidth: 0
-            }]
-        },
-        option: {
-            indexAxis: 'y',
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    min: 0,
-                    max: 100,
-                    ticks: {
-                        stepSize: 20,
-                        callback: value => value +'%'
-                    }
-                },
-                y: {
-                }
-            },
-            plugins: {
-                legend: {display: false}
-            }
-        }
-    });
-}
+     if (chartInstance) {
+         chartInstance.destroy();
+     }
+     chartInstance = new Chart(ctx, {
+         type: 'doughnut',
+         data: {
+             labels: ['위험도', '나머지'],
+             datasets: [{
+                 data: [khsRounded, 100 - khsRounded],
+                 backgroundColor: ['#FF4B5C', '#f0f0f0'],
+                 borderWidth: 1
+             }]
+         },
+         options: {
+             cutout: '70%',
+             plugins: {
+                 legend: { display: false }
+             }
+         }
+     });
+ }
 </script>
 <div class="container">
     <h2>Q. Why KRPM?</h2>
