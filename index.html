@@ -117,13 +117,16 @@
             <option value="male">남성</option>
             <option value="female">여성</option>
         </select>
-
-        <input type="number" id="age" placeholder="나이 (age)" required>
-        <input type="number" id="tc" placeholder="총 콜레스테롤 (Total Cholesterol)" required>
-        <input type="number" id="hdl" placeholder="HDL 수치 (HDL-cholesterol)" required>
-        <input type="number" id="sbp" placeholder="수축기 혈압 (systolic BP)" required> 
+        <d2>*나이</d2>
+        <input type="number" id="age" required>
+        <d2>*총 콜레스테롤 (Total Cholesterol)</d2>
+        <input type="number" id="tc" required>
+        <d2>*HDL 수치 (HDL-cholesterol)</d2>
+        <input type="number" id="hdl" required>
+        <d2>*수축기 혈압 (systolic BP)</d2>
+        <input type="number" id="sbp"  required> 
         
-        <d2>*건강검진 결과 등으로 알 수 있습니다</d2>
+        <d2>건강검진 결과 등으로 알 수 있습니다</d2>
         
         <select id="tut" required>
             <option value="">혈압약 복용 여부</option>
@@ -244,13 +247,14 @@ function calculateKHS() {
     chartInstance = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['위험도', '나머지'],
+            labels: ['위험도'],
             datasets: [{
-                data: [khsRounded, 100 - khsRounded],
-                backgroundColor: ['#FF4B5C', '#dddddd'],
-                borderWidth: 1
+                data: [khsRounded],
+                backgroundColor: '#4c4c4c',
             }]
         },
+        option: {
+        }
     });
 }
 </script>
