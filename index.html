@@ -69,12 +69,13 @@
             margin-bottom: 7px;
             padding: 10px;
             width: 100%;
+            height: 30px;
             background-color: white;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
         }
-        select:focus {
+        select:hover {
         border-color: #FF4B5C;
         outline: none;
         }
@@ -147,7 +148,6 @@
 
     <div class="result" id="result"></div>
     <div class="risk-category" id="risk-category"></div>
-    <canvas id="riskChart" width="300" height="300"></canvas>
 </div>
 
 <script>
@@ -241,21 +241,15 @@ function calculateKHS() {
         chartInstance.destroy();
     }
     chartInstance = new Chart(ctx, {
-        type: 'doughnut',
+        type: 'bar'
         data: {
             labels: ['위험도', '나머지'],
             datasets: [{
                 data: [khsRounded, 100 - khsRounded],
-                backgroundColor: ['#FF4B5C', '#f0f0f0'],
+                backgroundColor: ['#FF4B5C', '#dddddd'],
                 borderWidth: 1
             }]
         },
-        options: {
-            cutout: '70%',
-            plugins: {
-                legend: { display: false }
-            }
-        }
     });
 }
 </script>
@@ -271,7 +265,7 @@ function calculateKHS() {
         cohort equations compared to a Korean Risk Prediction Model for atherosclerotic 
         cardiovascular disease Jung, Keum Ji et al. Atherosclerosis, Volume 242, Issue 1, 
         367 - 375) 위험도는 나이, 총 콜레스테롤, HDL 콜레스테롤 등을 토대로 검증된 계산식을 통해 계산됩니다. </d1>
-    <h2>발병 위험을 줄이기 위해서는 어떻게 해야하나요?</h2>
+    <h2>Q. 발병 위험을 줄이기 위해서는 어떻게 해야하나요?</h2>
     <d1>발병 위험은 나이에 비례하여 증가하며, 총 콜레스테롤이 너무 높거나 HDL 수치가 너무 낮으면 발병 위험이 
         올라갈 수 있습니다. 또한 일반적으로 흡연자인 경우, 당뇨병 환자인 경우 발병 위험이 일정 수준 올라가며, 
         여성보다 남성의 발병 위험이 상대적으로 높게 나타납니다. </d1>
