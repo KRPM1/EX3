@@ -251,18 +251,28 @@ function calculateKHS() {
             datasets: [{
                 data: [khsRounded],
                 backgroundColor: '#4c4c4c',
+                borderRadius: 8,
+                borderSkipped: false,
+                borderWidth: 0
             }]
         },
         option: {
-            indexAxis: 'x',
+            indexAxis: 'y',
+            maintainAspectRatio: false,
             scales: {
                 x: {
                     min: 0,
-                    max: 100
-                }
+                    max: 100,
+                    ticks: {
+                        stepSize: 20,
+                        callback: value => value +'%'
+                    }
+                },
                 y: {
-                beginAtZero: true
                 }
+            },
+            plugins: {
+                legend: {display: false}
             }
         }
     });
