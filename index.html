@@ -148,6 +148,7 @@
 
     <div class="result" id="result"></div>
     <div class="risk-category" id="risk-category"></div>
+    <canvas id="riskChart" width="300" height="300"></canvas>
 </div>
 
 <script>
@@ -236,7 +237,6 @@ function calculateKHS() {
     document.getElementById("risk-category").innerText = riskCategory;
 
     // 그래프
-    <canvas id="riskChart" width="300" height="300"></canvas>
     const ctx = document.getElementById('riskChart').getContext('2d');
     if (chartInstance) {
         chartInstance.destroy();
