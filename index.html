@@ -43,24 +43,18 @@
             font-weight: bold;
             color: #FF4B5C;
         }
-        d1 {
+        p {
             text-align: left;            
             font-weight: normal;
             font-size:16px;
             color: #000000;
         }
-        d2 {
+        small {
             text-align: left;
             margin-lef: 5px;
             font-weight: normal;
             font-size: 13px;
             color: #4c4c4c;
-        }
-        d3 {
-            text-align: left;            
-            font-weight: normal;
-            font-size:16px;
-            color: #878787;
         }
         input {
             margin-top: 7px;
@@ -125,16 +119,16 @@
             <option value="male">남성</option>
             <option value="female">여성</option>
         </select>
-        <d2><br>*나이</d2>
+        <small><br>*나이</small>
         <input type="number" id="age" required>
-        <d2>*총 콜레스테롤 (Total Cholesterol)</d2>
+        <small>*총 콜레스테롤 (Total Cholesterol)</small>
         <input type="number" id="tc" required>
-        <d2>*HDL 수치 (HDL-cholesterol)</d2>
+        <small>*HDL 수치 (HDL-cholesterol)</small>
         <input type="number" id="hdl" required>
-        <d2>*수축기 혈압 (systolic BP)</d2>
+        <small>*수축기 혈압 (systolic BP)</small>
         <input type="number" id="sbp"  required> 
         
-        <d2>건강검진 결과 등으로 알 수 있습니다<br></d2>
+        <small>건강검진 결과 등으로 알 수 있습니다<br></small>
         
         <select id="tut" required>
             <option value="">혈압약 복용 여부</option>
@@ -273,32 +267,34 @@ function calculateKHS() {
 </script>
 <div class="container">
     <h2>Q. Why KRPM?</h2>
-    <d1>KRPM(Korean Risk Protection Model)은 한국인에게 최적화된 ASCVD
+    <p>KRPM(Korean Risk Protection Model)은 한국인에게 최적화된 ASCVD
         (죽상경화성 심혈관 질환, Atherosclerotic Cardiovascular Disease) 
         발병 위험도 측정 모델입니다. 가장 보편적으로 사용되는 ACC/AHA(2013)모델은 미국인 환자 데이터를 기반으로 하고 있어
-        동양인에 대한 위험도를 과하게 측정하기 때문에, 이를 보완하고자 2015년에 제안된 한국형 모델입니다.</d1>
+        동양인에 대한 위험도를 과하게 측정하기 때문에, 이를 보완하고자 2015년에 제안된 한국형 모델입니다.</p>
     <h2>Q. ASCVD(죽상경화증)이란 무엇인가요?</h2>
-    <d1>ASCVD는 흔히 ‘동맥경화증’으로 불리며 혈관에 지질이 쌓여 혈류에 문제가 생기는 질환입니다. 협심증, 심근경색, 
+    <p>ASCVD는 흔히 ‘동맥경화증’으로 불리며 혈관에 지질이 쌓여 혈류에 문제가 생기는 질환입니다. 협심증, 심근경색, 
         뇌졸중, 말초혈관 질환으로 발병할 수 있으며, 주요 원인으로는 높은 콜레스테롤 수치, 적은 HDL 수치, 고혈압, 
-        당뇨, 흡연 등이 있습니다.</d1>
+        당뇨, 흡연 등이 있습니다.</p>
     <h2>Q. 위험도는 어떻게 계산되나요?</h2>
-    <d1>위험도 측정 수식은 2015년 KRPM 모델을 기반으로 하고 있습니다. (원본 논문 : The ACC/AHA 2013 pooled 
+    <p>위험도 측정 수식은 2015년 KRPM 모델을 기반으로 하고 있습니다. (원본 논문 : The ACC/AHA 2013 pooled 
         cohort equations compared to a Korean Risk Prediction Model for atherosclerotic 
         cardiovascular disease Jung, Keum Ji et al. Atherosclerosis, Volume 242, Issue 1, 
         367 - 375) 위험도는 40-79세 한국인 20만 명의 데이터를 토대로 설계된 검증된 계산식을 통해 계산됩니다. 
-        위험도는 1. 심혈관계 질환이 발병한 경험이 없는 2. 한국인 사용자인 경우에만 유효합니다. </d1>
+        위험도는 1. 심혈관계 질환이 발병한 경험이 없는 2. 한국인 사용자인 경우에만 유효합니다. </p>
     <h2>Q. 발병 위험을 줄이기 위해서는 어떻게 해야하나요?</h2>
-    <d1>발병 위험은 나이에 비례하여 증가하며, 총 콜레스테롤이 너무 높거나 HDL 수치가 너무 낮으면 발병 위험이 
+    <p>발병 위험은 나이에 비례하여 증가하며, 총 콜레스테롤이 너무 높거나 HDL 수치가 너무 낮으면 발병 위험이 
         올라갈 수 있습니다. 또한 일반적으로 흡연자인 경우, 당뇨병 환자인 경우 발병 위험이 일정 수준 올라가며, 
-        여성보다 남성의 발병 위험이 상대적으로 높게 나타납니다. </d1>
-    <d3><br>ASCVD 위험도 0~10% : 저위험군</d3>
-    <d3><br>ASCVD 위험도 10~20% : 중위험군</d3>
-    <d3><br>ASCVD 위험도 20~% : 고위험군</d3>
-    <d3><br>최종수정일:2025.04.29</d3>
-    <d3><br>The ACC/AHA 2013 pooled 
+        여성보다 남성의 발병 위험이 상대적으로 높게 나타납니다. </p>
+</div>
+<div class="container">
+    <small><br>ASCVD 위험도 0~10% : 저위험군</small>
+    <small><br>ASCVD 위험도 10~20% : 중위험군</small>
+    <small><br>ASCVD 위험도 20~% : 고위험군</small>
+    <small><br>최종수정일:2025.04.29</small>
+    <small><br>The ACC/AHA 2013 pooled 
         cohort equations compared to a Korean Risk Prediction Model for atherosclerotic 
         cardiovascular disease Jung, Keum Ji et al. Atherosclerosis, Volume 242, Issue 1, 
-        367 - 375</d3>
+        367 - 375</small>
 </div>
 </body>
 </html>
