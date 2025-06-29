@@ -122,6 +122,8 @@
     <h1>KRPM 계산기 <br>- 심뇌혈관질환 발병 확률 계산</h1>
 
     <form id="khs-form">
+         <small>총 콜레스테롤, HDL 수치 등은 건강검진 결과 등을 통해 알 수 있습니다<br>
+             위험도는 1. 심혈관계 질환이 발병한 경험이 없는 2. 한국인 사용자인 경우에만 유효합니다<br></small>
         <select id="gender" required>
             <option value="">성별 선택</option>
             <option value="male">남성</option>
@@ -135,8 +137,6 @@
         <input type="number" id="hdl" required>
         <small>*수축기 혈압 (systolic BP)</small>
         <input type="number" id="sbp"  required> 
-        
-        <small>건강검진 결과 등으로 알 수 있습니다<br></small>
         
         <select id="tut" required>
             <option value="">혈압약 복용 여부</option>
