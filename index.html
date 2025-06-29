@@ -236,7 +236,7 @@ function calculateKHS() {
     const khs = (1 - Math.pow(baseline, y)) * 100;
     const khsRounded = Math.round(khs * 10) / 10;
 
-    document.getElementById("result").innerText = `당신의 10년 ASCVD 위험도는 약 ${khsRounded}% 입니다.`;
+    document.getElementById("result").innerText = `10년 내 심혈관질환 발병 확률은 ${khsRounded}% 입니다.`;
 
     // 위험군 분류
     let riskCategory = "";
