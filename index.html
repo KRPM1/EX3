@@ -123,9 +123,6 @@
 
     <form id="khs-form">
          <small>총 콜레스테롤, HDL 수치 등은 건강검진 결과 등을 통해 알 수 있습니다<br>
-             건강보험공단 홈페이지 접속 후 간편인증/공동인증서로 로그인하면 온라인으로 건강검진 결과를 조회할 수 있습니다<br>
-             https://www.nhis.or.kr/nhis/healthin/wbhaca04500m01.do<br>
-             건강모아>나의건강관리>국가건강검진정보>'건강검진 결과 조회 및 발급' 메뉴에서 조회 및 발급<br>
              위험도는 1. 심혈관계 질환이 발병한 경험이 없는 2. 한국인 사용자인 경우에만 유효합니다<br></small>
         <select id="gender" required>
             <option value="">성별 선택</option>
@@ -134,11 +131,11 @@
         </select>
         <small><br>*나이</small>
         <input type="number" id="age" required>
-        <small>*총 콜레스테롤 (Total Cholesterol)</small>
+        <small>*총 콜레스테롤 (Total Cholesterol) (예시: '200')</small>
         <input type="number" id="tc" required>
-        <small>*HDL 수치 (HDL-cholesterol)</small>
+        <small>*HDL 수치 (HDL-cholesterol)(예시: '50')</small>
         <input type="number" id="hdl" required>
-        <small>*수축기 혈압 (systolic BP)</small>
+        <small>*수축기 혈압 (systolic BP)(예시: '120')</small>
         <input type="number" id="sbp"  required> 
         
         <select id="tut" required>
@@ -160,6 +157,9 @@
         </select>
 
         <button type="button" onclick="calculateKHS()">계산하기</button>
+        <small>건강보험공단 홈페이지 접속 후 간편인증/공동인증서로 로그인하면 온라인으로 건강검진 결과를 조회할 수 있습니다<br>
+             https://www.nhis.or.kr/nhis/healthin/wbhaca04500m01.do<br>
+             건강모아>나의건강관리>국가건강검진정보>'건강검진 결과 조회 및 발급' 메뉴에서 조회 및 발급<br></small>
     </form>
 
     <div class="result" id="result"></div>
@@ -299,7 +299,7 @@ function calculateKHS() {
     <small><br>ASCVD 위험도 0~10% : 저위험군</small>
     <small><br>ASCVD 위험도 10~20% : 중위험군</small>
     <small><br>ASCVD 위험도 20~% : 고위험군</small>
-    <small><br>최종수정일:2025.06.29</small>
+    <small><br>최종수정일:2025.07.04</small>
     <small><br>The ACC/AHA 2013 pooled 
         cohort equations compared to a Korean Risk Prediction Model for atherosclerotic 
         cardiovascular disease Jung, Keum Ji et al. Atherosclerosis, Volume 242, Issue 1, 
